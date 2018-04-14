@@ -9,6 +9,7 @@ import Contact from './Contact';
 import Edits from './Edits';
 import Mood from './Mood';
 import Rtw from './Rtw';
+import Button from './Button';
 import './App.css';
 /*
 <Switch>
@@ -22,6 +23,12 @@ import './App.css';
 </Switch>
 */
 class App extends Component {
+  handleClick(){
+    let message = 'the button has been BOOOOPED!';
+    console.log(message);
+    alert(message);
+  }
+
   render() {
     return (
       <div className="App">
@@ -30,6 +37,7 @@ class App extends Component {
          Hello
         </p>
         <Home name="Yang" logged={false}/>
+        <Button onClick={this.handleClick} />
         </div>
     );
   }
