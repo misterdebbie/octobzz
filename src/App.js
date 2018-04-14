@@ -10,7 +10,17 @@ import Edits from './Edits';
 import Mood from './Mood';
 import Rtw from './Rtw';
 import './App.css';
-
+/*
+<Switch>
+<Route exact path="/home" component={Home} />
+<Route exact path="/all" component={All} />
+<Route exact path="/contact" component={Contact} />
+<Route exact path="/edits" component={Edits} />
+<Route exact path="/mood" component={Mood} />
+<Route exact path="/rtw" component={Rtw} />
+<Route exact path="/about" component={About} />
+</Switch>
+*/
 class App extends Component {
   render() {
     return (
@@ -19,16 +29,8 @@ class App extends Component {
         <p className="">
          Hello
         </p>
-        <Switch>
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/all" component={All} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/edits" component={Edits} />
-        <Route exact path="/mood" component={Mood} />
-        <Route exact path="/rtw" component={Rtw} />
-        <Route exact path="/about" component={About} />
-       </Switch>
-      </div>
+        <Home name="Yang" logged={false}/>
+        </div>
     );
   }
 }
