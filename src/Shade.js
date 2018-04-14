@@ -4,7 +4,8 @@ class Shade extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      weather: 'sunny'
+      weather: 'sunny',
+      color: "#e0d86b"
     };
     this.toggleShade = this.toggleShade.bind(this);
   }
@@ -17,7 +18,7 @@ class Shade extends React.Component {
 
   render(){
     return (
-      <div>
+      <div style={{background: this.state.color}}>
        <h3> it is so {this.state.weather}!</h3>
        <button onClick={this.toggleShade}>
        mother nature fluxxxx

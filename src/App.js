@@ -10,6 +10,9 @@ import Edits from './Edits';
 import Mood from './Mood';
 import Rtw from './Rtw';
 import Button from './Button';
+import Shade from './Shade';
+import Kid from './Kid';
+import Form from './Form';
 import './App.css';
 /*
 <Switch>
@@ -23,6 +26,15 @@ import './App.css';
 </Switch>
 */
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      color: 'pink',
+      name: 'Regina'
+    };
+    console.log(this.state);
+  }
+
   handleClick(){
     let message = 'the button has been BOOOOPED!';
     console.log(message);
@@ -34,10 +46,13 @@ class App extends Component {
       <div className="App">
        <NavB />
         <p className="">
-         Hello
+         Hello, my favorite color is {this.state.color}
         </p>
         <Home name="Yang" logged={false}/>
-        <Button onClick={this.handleClick} />
+        <Button onClick={this.handleClick} text="hello"/>
+        <Shade />
+        <Kid name={this.state.name}/>
+        <Form />
         </div>
     );
   }
