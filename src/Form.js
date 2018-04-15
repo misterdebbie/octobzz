@@ -9,6 +9,13 @@ class Form extends React.Component {
     this.handleChange = this.handleChange.bind(this);
 
   }
+  componentWillMount(){
+    console.log('Form component is mounting');
+    //this.setState({ userInput: 'test input!'});
+  }
+  componentDidMount(){
+    console.log('Form component has mounted. WOO');
+  }
   handleChange(e){
     this.setState({ userInput: e.target.value })
   }
